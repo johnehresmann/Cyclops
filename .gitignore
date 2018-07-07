@@ -34,3 +34,38 @@ sysinfo.txt
 # Builds
 *.apk
 *.unitypackage
+Assets/Energy Bar Toolkit/
+
+Assets/Editor Default Resources/
+
+Assets/Gizmos/
+
+Assets/PlayMaker/
+
+Assets/Plugins/
+
+Assets/ProCore/
+
+Assets/Standard Assets/
+
+Assets/TextMesh Pro/
+
+Assets/VolumetricLines/
+
+Assets/Editor Default Resources\.meta
+
+Assets/Energy Bar Toolkit\.meta
+
+Assets/Gizmos\.meta
+
+Assets/PlayMaker\.meta
+
+Assets/Plugins\.meta
+
+Assets/ProCore\.meta
+
+Assets/Standard Assets\.meta
+
+Assets/TextMesh Pro\.meta
+
+Assets/VolumetricLines\.meta
