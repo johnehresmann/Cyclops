@@ -27,7 +27,7 @@ GameObject:
   - component: {fileID: 114035974935299118}
   - component: {fileID: 54827786922947172}
   - component: {fileID: 114171556946392622}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: ballProjectile 1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -366,6 +366,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   projectileSpeed: 10
   playerObject: {fileID: 0}
+  playerLayer:
+    serializedVersion: 2
+    m_Bits: 520
 --- !u!114 &114680277084063420
 MonoBehaviour:
   m_ObjectHideFlags: 1
