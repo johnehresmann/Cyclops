@@ -1,46 +1,58 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
---- !u!1 &197128
+--- !u!1001 &100100000
+Prefab:
+  m_ObjectHideFlags: 1
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications: []
+    m_RemovedComponents: []
+  m_ParentPrefab: {fileID: 0}
+  m_RootGameObject: {fileID: 1828658139515732}
+  m_IsPrefabParent: 1
+--- !u!1 &1828658139515732
 GameObject:
   m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   serializedVersion: 5
   m_Component:
-  - component: {fileID: 431250}
-  - component: {fileID: 3355496}
-  - component: {fileID: 13564274}
-  - component: {fileID: 2369816}
-  - component: {fileID: 114812545343141464}
-  - component: {fileID: 114702516399387154}
-  - component: {fileID: 114391771561054914}
-  - component: {fileID: 54546647761154454}
+  - component: {fileID: 4887596639295620}
+  - component: {fileID: 33509332140266190}
+  - component: {fileID: 135090038248650790}
+  - component: {fileID: 23437760507858672}
+  - component: {fileID: 114158760698145914}
+  - component: {fileID: 114680277084063420}
+  - component: {fileID: 114035974935299118}
+  - component: {fileID: 54827786922947172}
+  - component: {fileID: 114171556946392622}
   m_Layer: 0
-  m_Name: ballProjectile
+  m_Name: ballProjectile 1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!4 &431250
+--- !u!4 &4887596639295620
 Transform:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 197128}
+  m_GameObject: {fileID: 1828658139515732}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 2219808.8, y: -327293.44, z: 21395204}
-  m_LocalScale: {x: 0.25, y: 0.25, z: 0.25}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!23 &2369816
+--- !u!23 &23437760507858672
 MeshRenderer:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 197128}
+  m_GameObject: {fileID: 1828658139515732}
   m_Enabled: 1
   m_CastShadows: 1
   m_ReceiveShadows: 1
@@ -70,81 +82,45 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
---- !u!33 &3355496
+--- !u!33 &33509332140266190
 MeshFilter:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 197128}
+  m_GameObject: {fileID: 1828658139515732}
   m_Mesh: {fileID: 10207, guid: 0000000000000000e000000000000000, type: 0}
---- !u!135 &13564274
-SphereCollider:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 197128}
-  m_Material: {fileID: 13400000, guid: d942bdff2c836794db09c75984ca84ee, type: 2}
-  m_IsTrigger: 1
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Radius: 0.5
-  m_Center: {x: 0, y: 0, z: 0}
---- !u!1001 &100100000
-Prefab:
-  m_ObjectHideFlags: 1
-  serializedVersion: 2
-  m_Modification:
-    m_TransformParent: {fileID: 0}
-    m_Modifications: []
-    m_RemovedComponents: []
-  m_ParentPrefab: {fileID: 0}
-  m_RootGameObject: {fileID: 197128}
-  m_IsPrefabParent: 1
---- !u!54 &54546647761154454
+--- !u!54 &54827786922947172
 Rigidbody:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 197128}
+  m_GameObject: {fileID: 1828658139515732}
   serializedVersion: 2
   m_Mass: 1
   m_Drag: 0
   m_AngularDrag: 0.05
-  m_UseGravity: 1
+  m_UseGravity: 0
   m_IsKinematic: 0
   m_Interpolate: 0
-  m_Constraints: 6
+  m_Constraints: 0
   m_CollisionDetection: 0
---- !u!114 &114391771561054914
+--- !u!114 &114035974935299118
 MonoBehaviour:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 197128}
+  m_GameObject: {fileID: 1828658139515732}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 0476f46f96077244084e5823ec79cd34, type: 3}
+  m_Script: {fileID: 0}
   m_Name: 
   m_EditorClassIdentifier: 
-  shotSpeed: 10
---- !u!114 &114702516399387154
+--- !u!114 &114158760698145914
 MonoBehaviour:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 197128}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 715655405f7792442b10a3dc4c63ddbd, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  poolItemName: ballProjectile
---- !u!114 &114812545343141464
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 197128}
+  m_GameObject: {fileID: 1828658139515732}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 204c52b1bd219bc4d981667d797f5983, type: 3}
@@ -170,11 +146,11 @@ MonoBehaviour:
     variableSource: 1
     worldVariableName: 
     curModMode: 1
-    selfValue: 1
+    selfValue: 10
     minimum: -100000
     maximum: 100000
   listener: {fileID: 0}
-  poolBossCategoryName: '[Uncategorized]'
+  poolBossCategoryName: Player
   invincibilityExpanded: 0
   isInvincible: 0
   invincibleWhileChildrenKillablesExist: 1
@@ -281,12 +257,12 @@ MonoBehaviour:
   damagePrefabRandomizeXRotation: 0
   damagePrefabRandomizeYRotation: 0
   damagePrefabRandomizeZRotation: 0
-  despawnStatDamageModifiersExpanded: 0
+  despawnStatDamageModifiersExpanded: 1
   damagePrefabOnDeathHit: 0
   playerStatDamageModifiers:
     scenarioName: CONDITION_NAME
     statMods: []
-  damageKnockBackExpanded: 0
+  damageKnockBackExpanded: 1
   sendDamageKnockback: 0
   receiveKnockbackWhenDamaged: 0
   receiveKnockbackWhenInvince: 0
@@ -377,3 +353,40 @@ MonoBehaviour:
     maximum: 100
   respawnFireEvents: 0
   respawnCustomEvents: []
+--- !u!114 &114171556946392622
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1828658139515732}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f27ee202c1302584e8966c840c24c4fa, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  projectileSpeed: 10
+  playerObject: {fileID: 0}
+--- !u!114 &114680277084063420
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1828658139515732}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 715655405f7792442b10a3dc4c63ddbd, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  poolItemName: ballProjectile
+--- !u!135 &135090038248650790
+SphereCollider:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1828658139515732}
+  m_Material: {fileID: 13400000, guid: d942bdff2c836794db09c75984ca84ee, type: 2}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Radius: 0.5
+  m_Center: {x: 0, y: 0, z: 0}
