@@ -14,7 +14,7 @@ MonoBehaviour:
   abilityName: Ability Name Here
   projectile: {fileID: 1828658139515732, guid: 00de055ef586cdc468dea5b6ef6d14f0, type: 2}
   isEnabled: 1
-  fireDelay: 0.05
-  pSpeed: 1000
-  isLongTouch: 0
-  isquickTouch: 0
+  fireDelay: 0.1
+  pSpeed: 1500
+  isLongTouch: 1
+  isDoubleTouch: 0

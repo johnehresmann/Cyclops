@@ -10,6 +10,7 @@ namespace EasyInputVR.Misc
     public class FirstPersonTurnAndShoot : MonoBehaviour
     {
         #region Projectile Variables - Controlled in the individual Scripted Objects
+        
         [HideInInspector] public GameObject projectile;
         [HideInInspector]public float projectileSpeed;
         [SerializeField]
@@ -19,7 +20,10 @@ namespace EasyInputVR.Misc
         [HideInInspector]public Abilities currentAbility;
         [HideInInspector]public ScriptableObject previousAbility;
         [HideInInspector]public ScriptableObject nextAbility;
+        [HideInInspector]bool isLongTouch;
+        [HideInInspector]bool isDoubleTouch;
         #endregion
+        
         
         public int defaultAbility = 0;
          PowerManagement pwrMng;
@@ -38,6 +42,7 @@ namespace EasyInputVR.Misc
             EasyInputHelper.On_LongTouchEnd += localOnLongTouchEnd;
             EasyInputHelper.On_SwipeDetected += localOnSwipeDetected;
             EasyInputHelper.On_LongTouch += localOnLongTouch;
+            EasyInputHelper.On_DoubleTouchEnd += localOnDoubleTouchEnd;
         }
 
         void OnDestroy()
@@ -47,6 +52,7 @@ namespace EasyInputVR.Misc
             EasyInputHelper.On_LongTouchEnd -= localOnLongTouchEnd;
             EasyInputHelper.On_SwipeDetected -= localOnSwipeDetected;
             EasyInputHelper.On_LongTouch -= localOnLongTouch;
+            EasyInputHelper.On_DoubleTouchEnd -= localOnDoubleTouchEnd;
         }
 
         void Start()
@@ -85,6 +91,7 @@ namespace EasyInputVR.Misc
         *****Next availiable power.***************/
         void localOnTouchEnd(InputTouch touch)
         {
+            
               
         }
 
@@ -126,26 +133,58 @@ namespace EasyInputVR.Misc
             MasterProjectile plyrScript = FindObjectOfType<MasterProjectile>();
              projectileSpeed = currentAbility.pSpeed;
 
-            if (canFire)
+            if(isLongTouch)
             {
-                
-                currentAbility.fireAbility(projectile, spawnTransform, projectileSpeed);
-                StartCoroutine(TimeDelay());
-                //plyrScript.fireProjectile(projectile, spawnTransform, projectileSpeed);
+                if (canFire)
+                {
+                    
+                    currentAbility.fireAbility(projectile, spawnTransform, projectileSpeed);
+                    StartCoroutine(TimeDelay());
+                    //plyrScript.fireProjectile(projectile, spawnTransform, projectileSpeed);
 
-                /* Transform newObject = PoolBoss.SpawnOutsidePool(prefabBall.transform, spawnTransform.transform.position, spawnTransform.transform.rotation);
-                Rigidbody newRigidBody = newObject.GetComponent<Rigidbody>();
-                newRigidBody.AddForce((spawnTransform.forward)*projectileSpeed);  */         
+                    /* Transform newObject = PoolBoss.SpawnOutsidePool(prefabBall.transform, spawnTransform.transform.position, spawnTransform.transform.rotation);
+                    Rigidbody newRigidBody = newObject.GetComponent<Rigidbody>();
+                    newRigidBody.AddForce((spawnTransform.forward)*projectileSpeed);  */         
 
-            }      
+                }
+            } else
+            {
+                Debug.Log("Not Long Touch");
+            }
 
         }
 
+        void localOnDoubleTouchEnd (InputTouch touch)
+        {
+            MasterProjectile plyrScript = FindObjectOfType<MasterProjectile>();
+             projectileSpeed = currentAbility.pSpeed;
+
+            if(isDoubleTouch)
+            {
+                if (canFire)
+                {
+                    
+                    currentAbility.fireAbility(projectile, spawnTransform, projectileSpeed);
+                    StartCoroutine(TimeDelay());
+                    //plyrScript.fireProjectile(projectile, spawnTransform, projectileSpeed);
+
+                    /* Transform newObject = PoolBoss.SpawnOutsidePool(prefabBall.transform, spawnTransform.transform.position, spawnTransform.transform.rotation);
+                    Rigidbody newRigidBody = newObject.GetComponent<Rigidbody>();
+                    newRigidBody.AddForce((spawnTransform.forward)*projectileSpeed);  */         
+
+                }
+            } else
+            {
+                Debug.Log("Not Quick Touch");
+            }
+        }
+
         public void AbiltyChecker()
-        { 
+        {
         
             currentAbility = pwrMng.playerAbility[currentAbilityID];
-
+            isLongTouch = currentAbility.isLongTouch;
+        isDoubleTouch = currentAbility.isDoubleTouch;
            
 
             fireDelay = currentAbility.fireDelay;

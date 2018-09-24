@@ -17,7 +17,7 @@ public abstract class Abilities : ScriptableObject {
 	[SerializeField]
 	public bool isLongTouch = false;
 	[SerializeField]
-	public bool isquickTouch = false;
+	public bool isDoubleTouch = false;
 
 	
 
