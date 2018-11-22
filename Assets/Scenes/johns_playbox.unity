@@ -216,12 +216,6 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 114270041970465010, guid: 062d939df2ae2894b8579db89290e4fa,
         type: 2}
-      propertyPath: prefabBall
-      value: 
-      objectReference: {fileID: 1828658139515732, guid: 00de055ef586cdc468dea5b6ef6d14f0,
-        type: 2}
-    - target: {fileID: 114270041970465010, guid: 062d939df2ae2894b8579db89290e4fa,
-        type: 2}
       propertyPath: spawn
       value: 
       objectReference: {fileID: 1865525553}
@@ -229,7 +223,7 @@ Prefab:
         type: 2}
       propertyPath: playerAbility
       value: 
-      objectReference: {fileID: 11400000, guid: dbe8c90f9203d2b4fb9b60731cf0b345,
+      objectReference: {fileID: 11400000, guid: 52eba57d584075146800cb5c831d863f,
         type: 2}
     - target: {fileID: 124639178086785204, guid: 062d939df2ae2894b8579db89290e4fa,
         type: 2}
