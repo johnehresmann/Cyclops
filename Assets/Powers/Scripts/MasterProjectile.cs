@@ -10,8 +10,7 @@ public class MasterProjectile : MonoBehaviour
 	
 	void Start()
 	{
-		plyrScript = GameObject.Find("Player").GetComponent<EasyInputVR.Misc.FirstPersonTurnAndShoot>();
-		speed = plyrScript.projectileSpeed;	
+		plyrScript = GameObject.Find("Player").GetComponent<EasyInputVR.Misc.FirstPersonTurnAndShoot>();	
 		
 
 	}
